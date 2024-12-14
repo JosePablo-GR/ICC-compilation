@@ -11,6 +11,19 @@ public class Estudiante extends Persona {
 
 	}
 
+	@Override
+	public void saludar () {
+
+		System.out.println("Me gusta ir a la escuela.");
+
+	}
+
+	public void saludar (String materia) {
+
+		System.out.println("Mi materia preferida es " + materia + ".");
+
+	}
+
 	public void mostrarCalificaciones () {
 
 		for (int x : this.getCalificaciones()) {

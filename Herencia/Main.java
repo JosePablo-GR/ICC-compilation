@@ -10,7 +10,13 @@ public class Main {
 		//System.out.println(e1);
 		//System.out.println(p1);
 
+		p1.saludar();
+
 		e1.saludar();
+		e1.saludar("Bases de Datos");
+
+		System.out.println();
+
 		System.out.println("Las califiaciones de " + e1.getNombre() + " son:" );
 		e1.mostrarCalificaciones();
 
