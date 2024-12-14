@@ -1,9 +1,9 @@
 public class Estudiante extends Persona {
 
 	String numeroCuenta;
-	int[] calificaciones;
+	double[] calificaciones;
 
-	public Estudiante (String nombre, int edad, String numeroCuenta, int[] calificaciones) {
+	public Estudiante (String nombre, int edad, String numeroCuenta, double[] calificaciones) {
 
 		super(nombre,edad);
 		this.numeroCuenta = numeroCuenta;
@@ -26,7 +26,7 @@ public class Estudiante extends Persona {
 
 	public void mostrarCalificaciones () {
 
-		for (int x : this.getCalificaciones()) {
+		for (double x : this.calificaciones) {
 
 			System.out.println(x);
 			
@@ -36,25 +36,13 @@ public class Estudiante extends Persona {
 
 	}
 
-	public void setNumeroCuenta (String numeroCuenta) {
-
-		this.numeroCuenta = numeroCuenta;
-
-	}
-
-	public void setCalificaciones (int[] calificaciones) {
-
-		this.calificaciones = calificaciones;
-
-	}
-
 	public String getNumeroCuenta () {
 
 		return numeroCuenta;
 
 	}
 
-	public int[] getCalificaciones () {
+	public double[] getCalificaciones () {
 
 		return calificaciones;
 
@@ -63,7 +51,7 @@ public class Estudiante extends Persona {
 	@Override
 	public String toString () {
 
-		return "Nombre : " + nombre + " (" + edad + ")" + "\n" + 
+		return "Nombre: " + nombre + " (" + edad + ")" + "\n" + 
 				"Num. Cuenta: " + numeroCuenta;
 
 	}

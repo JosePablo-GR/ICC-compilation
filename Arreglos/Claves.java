@@ -1,23 +1,23 @@
 import java.util.Scanner;
 import java.util.Random;
 
-class Claves{
+class Claves {
 
-	public static String imprimeArreglito(char[] a, String m){
+	public static String trasnformaEnCadena (char[] a) {
 		
-		String cad = "";
+		String cadena = "";
 
-		for(char c : a){
+		for (char c : a) {
 
-			cad += c;
+			cadena += c;
 
-		}//Fin for
+		}
 
-		return cad + m;
+		return cadena;
 
-	}//Fin toString modificado
+	}
 
-	public static char[] revuelve(String cadena){
+	public static char[] revuelve (String cadena) {
 
 		Random rd = new Random();
 
@@ -25,7 +25,7 @@ class Claves{
 
 		char[] arreglito = new char [cadena.length()];
 
-		for(int i = 0; i < arreglito.length; i++){
+		for (int i = 0; i < arreglito.length; i++){
 
 			char elemCadena = cadena.charAt(empieza);
 
@@ -33,9 +33,9 @@ class Claves{
 
 			empieza++;
 
-		}//Fin for rellena arreglo
+		}
 
-		for(int j = 0; j < arreglito.length; j++){
+		for (int j = 0; j < arreglito.length; j++) {
 
 			int positionArregloN = rd.nextInt(arreglito.length);
 
@@ -47,15 +47,15 @@ class Claves{
 
 			arreglito[positionArregloN] = actual;
 
-		}//Fin for desacomoda cadena
+		}
 
 		return arreglito;
 
-	}//Fin método revuelve
+	}
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 
-	for(int a = 1; a <= 10; a++) {
+	for (int a = 1; a <= 10; a++) {
 
 		Random rd = new Random();
 
@@ -77,7 +77,7 @@ class Claves{
 		int n;
 		int unoDosNum = rd.nextInt(2);
 
-		if(unoDosNum == 1){
+		if (unoDosNum == 1) {
 
 			n = 1;
 
@@ -85,17 +85,17 @@ class Claves{
 
 			n = 2;
 
-		}//Fin if uno o dos números
+		}
 
 		int seguridadNumeros = n;
 
-		for(int i = 1; i <= n; i++){
+		for (int i = 1; i <= n; i++) {
 
 			int numeros = rd.nextInt(10);
 
 			cadFinal += numeros;
 
-		}//Fin for incluye uno o dos números
+		}
 
 		//////////Escoge letras//////////
 		String alf = "abcdefghijklmnopqrstuvwxyz";
@@ -105,7 +105,7 @@ class Claves{
 		int posicion;
 		int unoDosMayus = rd.nextInt(2);
 
-		if(unoDosMayus == 1){ //Habrá UNA mayúscula
+		if (unoDosMayus == 1) {
 
 			m = 1;
 
@@ -113,11 +113,11 @@ class Claves{
 
 			m = 2;
 
-		}//Fin if una o dos mayúsculas
+		}
 
 		int seguridadLetras = m;
 
-		for(int j = 1; j <= m; j++){
+		for (int j = 1; j <= m; j++) {
 
 			posicion = rd.nextInt(26);
 
@@ -125,11 +125,11 @@ class Claves{
 
 			cadFinal += letraMayus;
 
-		}//Fin for agarra una o dos mayúsculas
+		}
 
 		longRestante = 8 - cadFinal.length();
 
-		for(int k = 1; k <= longRestante; k++){
+		for (int k = 1; k <= longRestante; k++) {
 
 			posicion = rd.nextInt(26);
 
@@ -137,30 +137,30 @@ class Claves{
 
 			cadFinal += letra;
 
-		}//Fin for agarra letras minúsculas
+		}
 
 		String mensajeSeguridad;
 
-		if(seguridadNumeros == 2 && seguridadLetras == 2){
+		if ((seguridadNumeros == 2) && (seguridadLetras == 2)) {
 
-			mensajeSeguridad = " Seguridad alta";
+			mensajeSeguridad = "Seguridad alta";
 
-		} else if(seguridadNumeros == 1 && seguridadLetras == 1){
+		} else if ((seguridadNumeros == 1) && (seguridadLetras == 1)) {
 
-			mensajeSeguridad = " Seguridad débil";
+			mensajeSeguridad = "Seguridad débil";
 
 		} else {
 
-			mensajeSeguridad = " Seguridad media";
+			mensajeSeguridad = "Seguridad media";
 
-		}//Fin if seguridad
+		}
 
 		char[] revuelto = revuelve(cadFinal);
 
-		System.out.println(imprimeArreglito(revuelto, mensajeSeguridad));
+		System.out.println(trasnformaEnCadena(revuelto) + " " + mensajeSeguridad);
 
-		}//Fin for 10 veces
+		}
 
-	}//Fin main
+	}
 
-}//Fin class
+}
