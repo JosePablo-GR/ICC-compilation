@@ -1,73 +1,86 @@
 public class Billete {
 
-	int denominacionBillete;
-	String imagenFigurativa;
+	int denominacion;
+	String imagen;
 	String numeroSerie;
 
-	public Billete() {
+	public Billete () {
 
-		denominacionBillete = 0;
-		imagenFigurativa = "";
-		numeroSerie = "";
+		denominacion = 0;
+		imagen = "Imagen en blanco";
+		numeroSerie = "0 0 0 0";
 
 	}
 
-	public Billete(int denominacionBillete, String imagenFigurativa, String numeroSerie) {
+	public Billete (int denominacion, String imagen, String numeroSerie) {
 
-		this.denominacionBillete = denominacionBillete;
-		this.imagenFigurativa = imagenFigurativa;
+		this.denominacion = denominacion;
+		this.imagen = imagen;
 		this.numeroSerie = numeroSerie;
 
 	}
 
-	public Billete(Billete billete) {
+	public Billete (Billete billete) {
 
-		denominacionBillete = billete.obtenerDenominacionBillete();
-		imagenFigurativa = billete.obtenerImagenFigurativa();
-		numeroSerie = billete.obtenerNumeroSerie();
-
-	}
-
-	public void asignarDenominacionBillete(int denominacionBillete) {
-
-		this.denominacionBillete = denominacionBillete;
+		denominacion = billete.getDenominacionBillete();
+		imagen = billete.getImagen();
+		numeroSerie = billete.getNumeroSerie();
 
 	}
 
-	public int obtenerDenominacionBillete() {
+	public void setDenominacionBillete (int denominacion) {
 
-		return denominacionBillete;
-
-	}
-
-	public void asignarImagenFigurativa(String imagenFigurativa) {
-
-		this.imagenFigurativa = imagenFigurativa;
+		this.denominacion = denominacion;
 
 	}
 
-	public String obtenerImagenFigurativa() {
+	public int getDenominacionBillete () {
 
-		return imagenFigurativa;
+		return denominacion;
 
 	}
 
-	public void asignarNumeroSerie(String numeroSerie) {
+	public void setImagen (String imagen) {
+
+		this.imagen = imagen;
+
+	}
+
+	public String getImagen () {
+
+		return imagen;
+
+	}
+
+	public void setNumeroSerie (String numeroSerie) {
 
 		this.numeroSerie = numeroSerie;
 
 	}
 
-	public String obtenerNumeroSerie() {
+	public String getNumeroSerie () {
 
 		return numeroSerie;
 
 	}
 
-	public String toString(){
+	public boolean equals (Billete b) {
 
-		return "Billete de $" + denominacionBillete + " que tiene la figura " + imagenFigurativa + " y el número de serie "
-		+ numeroSerie;
+		boolean igual = true;
+
+		igual = igual && (this.denominacion == b.denominacion) ? true : false;
+		igual = igual && (this.imagen.equals(b.imagen)) ? true : false;
+		igual = igual && (this.numeroSerie.equals(b.numeroSerie)) ? true : false;
+
+		return igual;
+
+	}
+
+	@Override
+	public String toString (){
+
+		return "\nBillete de $" + denominacion + " que tiene la figura " + imagen + " y el número de serie "
+				+ numeroSerie;
 
 	}
 

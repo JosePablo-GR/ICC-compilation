@@ -6,7 +6,7 @@ public class PalabraPalindroma {
 
 	   Scanner entrada = new Scanner(System.in);
 
-       System.out.println("Escribe una palabra y sabrás si es palíndroma:");
+       System.out.println("Escribe una palabra y sabrás si es un palíndromo:");
        String cadenaPal = entrada.nextLine();
 
        int i = cadenaPal.length();
@@ -27,11 +27,11 @@ public class PalabraPalindroma {
 
         if (cadenaPal.equals(valida)) {
 
-            System.out.println("La palabra es la misma.");
+            System.out.println("La palabra es la misma, es un palíndromo.");
 
         } else {
 
-            System.out.println("La palabra NO es la misma.");
+            System.out.println("La palabra no es la misma, no un palíndromo.");
 
         }
 

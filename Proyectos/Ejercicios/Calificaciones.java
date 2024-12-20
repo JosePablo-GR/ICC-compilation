@@ -6,6 +6,18 @@ public class Calificaciones {
 
 	Random aleatorios = new Random();
 
+	int contCero = 0;
+	int contUno = 0;
+	int contDos = 0;
+	int contTres = 0;
+	int contCuatro = 0;
+	int contCinco = 0;
+	int contSeis = 0;
+	int contSiete = 0;
+	int contOcho = 0;
+	int contNueve = 0;
+	int contDiez = 0;
+
 		for (int veces = 1; veces <= 20; veces++) {
 
 			int califEntera = aleatorios.nextInt(11);
@@ -36,7 +48,6 @@ public class Calificaciones {
 
 			}
 
-
 			if (califEntera == 0) {
 
 				contCero++;
@@ -63,7 +74,7 @@ public class Calificaciones {
 
 			} else if (califEntera == 6) {
 
-				contSies++;
+				contSeis++;
 
 			} else if (califEntera == 7) {
 
@@ -85,7 +96,6 @@ public class Calificaciones {
 
 		}
 		
-		int contCero = 0;
 		System.out.print("\n0: ");
 		for (int i = 0; i < contCero; i++) {
 
@@ -93,7 +103,6 @@ public class Calificaciones {
 
 		}
 
-		int contUno = 0;
 		System.out.print("\n1: ");
 		for (int i = 0; i < contUno; i++) {
 
@@ -101,7 +110,6 @@ public class Calificaciones {
 
 		}
 
-		int contDos = 0;
 		System.out.print("\n2: ");
 		for (int i = 0; i < contDos; i++) {
 
@@ -109,7 +117,6 @@ public class Calificaciones {
 
 		}
 
-		int contTres = 0;
 		System.out.print("\n3: ");
 		for (int i = 0; i < contTres; i++) {
 
@@ -117,15 +124,13 @@ public class Calificaciones {
 
 		}
 
-		int contCuatro = 0;
 		System.out.print("\n4: ");
 		for (int i = 0; i < contCuatro; i++) {
 
 			System.out.print("*");
 
 		}
-		
-		int contCinco = 0;
+
 		System.out.print("\n5: ");
 		for (int i = 0; i < contCinco; i++) {
 
@@ -133,7 +138,6 @@ public class Calificaciones {
 
 		}
 
-		int contSeis = 0;
 		System.out.print("\n6: ");
 		for (int i = 0; i < contSeis; i++) {
 
@@ -141,7 +145,6 @@ public class Calificaciones {
 
 		}
 
-		int contSiete = 0;
 		System.out.print("\n7: ");
 		for (int i = 0; i < contSiete; i++) {
 
@@ -149,7 +152,6 @@ public class Calificaciones {
 
 		}
 
-		int contOcho = 0;
 		System.out.print("\n8: ");
 		for(int i = 0; i < contOcho; i++){
 
@@ -157,7 +159,6 @@ public class Calificaciones {
 
 		}
 
-		int contNueve = 0;
 		System.out.print("\n9: ");
 		for (int i = 0; i < contNueve; i++) {
 
@@ -165,7 +166,6 @@ public class Calificaciones {
 
 		}
 
-		int contDiez = 0;
 		System.out.print("\n10: ");
 		for (int i = 0; i < contDiez; i++) {
 

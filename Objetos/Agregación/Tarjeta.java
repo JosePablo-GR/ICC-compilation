@@ -1,105 +1,124 @@
 public class Tarjeta {
 
 	String numeroTarjeta;
-	String fechaCadudidad;
+	String fechaCaducidad;
 	String titular;
-	String emisor;
+	String banco;
 	int cvv;
 
-		public Tarjeta() {
+	public Tarjeta () {
 
-			numeroTarjeta = "";
-			fechaCadudidad = "";
-			titular = "";
-			emisor = "";
-			cvv = 0;
-		}
+		numeroTarjeta = "0000 0000 0000 0000";
+		fechaCaducidad = "00/00";
+		titular = "- - - - - - -";
+		banco = "Banco de México";
+		cvv = 0;
 
-		public Tarjeta(String numeroTarjeta, String fechaCadudidad, String titular, String emisor, int cvv) {
+	}
 
-			this.numeroTarjeta = numeroTarjeta;
-			this.fechaCadudidad = fechaCadudidad;
-			this.titular = titular;
-			this.emisor = emisor;
-			this.cvv = cvv;
+	public Tarjeta (String numeroTarjeta, String fechaCaducidad, String titular, String banco, int cvv) {
 
-		}
+		this.numeroTarjeta = numeroTarjeta;
+		this.fechaCaducidad = fechaCaducidad;
+		this.titular = titular;
+		this.banco = banco;
+		this.cvv = cvv;
 
-		public Tarjeta(Tarjeta tarjeta) {
+	}
 
-			numeroTarjeta = tarjeta.obtenerNumeroTarjeta();
-			fechaCadudidad = tarjeta.obtenerFechaCaducidad();
-			titular = tarjeta.obtenerTitular();
-			emisor = tarjeta.obtenerEmisor();
-			cvv = tarjeta.obtenerCvv();
+	public Tarjeta (Tarjeta tarjeta) {
 
-		}
+		numeroTarjeta = tarjeta.getNumeroTarjeta();
+		fechaCaducidad = tarjeta.getFechaCaducidad();
+		titular = tarjeta.getTitular();
+		banco = tarjeta.getBanco();
+		cvv = tarjeta.getCvv();
 
-		public void asignarNumeroTarjeta(String numeroTarjeta) {
+	}
 
-			this.numeroTarjeta = numeroTarjeta;
+	public void setNumeroTarjeta (String numeroTarjeta) {
 
-		}
+		this.numeroTarjeta = numeroTarjeta;
 
-		public String obtenerNumeroTarjeta() {
+	}
 
-			return numeroTarjeta;
+	public String getNumeroTarjeta () {
 
-		}
+		return numeroTarjeta;
 
-		public void asignarFechaCaducidad(String fechaCadudidad) {
+	}
 
-			this.fechaCadudidad = fechaCadudidad;
+	public void setFechaCaducidad (String fechaCaducidad) {
 
-		}
+		this.fechaCaducidad = fechaCaducidad;
 
-		public String obtenerFechaCaducidad() {
+	}
 
-			return fechaCadudidad;
+	public String getFechaCaducidad () {
 
-		}
+		return fechaCaducidad;
 
-		public void asignarTitular(String titular) {
+	}
 
-			this.titular = titular;
+	public void setTitular (String titular) {
 
-		}
+		this.titular = titular;
 
-		public String obtenerTitular() {
+	}
 
-			return titular;
+	public String getTitular () {
 
-		}
+		return titular;
 
-		public void asignarEmisor(String emisor) {
+	}
 
-			this.emisor = emisor;
+	public void setBanco (String banco) {
 
-		}
+		this.banco = banco;
 
-		public String obtenerEmisor() {
+	}
 
-			return emisor;
+	public String getBanco() {
 
-		}
+		return banco;
 
-		public void asignarCvv(int cvv) {
+	}
 
-			this.cvv = cvv;
+	public void setCvv(int cvv) {
 
-		}
+		this.cvv = cvv;
 
-		public int obtenerCvv() {
+	}
 
-			return cvv;
+	public int getCvv() {
 
-		}
+		return cvv;
 
-		public String toString() {
+	}
 
-			return "Número tarjeta: " + numeroTarjeta + "Fecha Caducidad: " + fechaCadudidad + "Titular: " + titular +
-			"Emisor: " +  emisor + "CVV: " + cvv;
+	public boolean equals (Tarjeta t) {
 
-		}
+		boolean igual = true;
+
+		igual = igual && (this.numeroTarjeta.equals(t.numeroTarjeta)) ? true : false;
+		igual = igual && (this.fechaCaducidad.equals(t.fechaCaducidad)) ? true : false;
+		igual = igual && (this.titular.equals(t.titular)) ? true : false;
+		igual = igual && (this.banco.equals(t.banco)) ? true : false;
+		igual = igual && (this.cvv == t.cvv) ? true : false;
+
+		return igual;
+
+	}
+
+	@Override
+	public String toString() {
+
+		return "\nNúmero tarjeta: " + numeroTarjeta + "\n" + 
+				"Fecha Caducidad: " + fechaCaducidad + "\n" +
+				"Titular: " + titular + "\n" +
+				"Banco: " +  banco + "\n" +
+				"CVV: " + cvv;
+
+	}
 
 }

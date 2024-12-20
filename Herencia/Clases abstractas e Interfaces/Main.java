@@ -5,14 +5,17 @@ public class Main {
 		Perro dog = new Perro("Firulais", "beagle", 2);
 		Gato cat = new  Gato("Wiskas", 3);
 
+		Mascota[] mascotas = {dog,cat};
+
 		System.out.println(cat);
 		System.out.println(dog);
 
-		System.out.print("Como " + cat.especie + " le hago: ");
-		cat.hacerSonido();
+		for (Mascota m : mascotas) {
 
-		System.out.print("Como " + dog.especie + " le hago: ");
-		dog.hacerSonido();
+			System.out.print("Como " + m.especie + " le hago: ");
+			m.hacerSonido();
+			
+		}
 
 		System.out.println();
 
