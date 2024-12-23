@@ -6,7 +6,7 @@ public class ForLoop {
 
 		Scanner sc = new Scanner(System.in);
 		
-		//Contar de 1 en 1
+		// Contar de 1 en 1
 		for (int i = 1; i <= 15; i++) {
 
 			System.out.println("Esta es la iteración " + i);
@@ -15,7 +15,7 @@ public class ForLoop {
 
 		System.out.println();
 
-		//Contar de 2 en 2
+		// Contar de 2 en 2
 		for (int j = 0; j <= 100; j += 2) {
 
 			System.out.println("Este es un número par: " + j);
@@ -25,7 +25,7 @@ public class ForLoop {
 		System.out.println();
 
 		System.out.println("¡Cuenta regresiva!");
-		//Contar hacia atrás de 1 en 1
+		// Contar hacia atrás de 1 en 1
 		for (int k = 10; k > -1; k --) {
 
 			System.out.println(k);
@@ -34,7 +34,7 @@ public class ForLoop {
 
 		System.out.println();
 
-		//Contamos cómo desee el usuario
+		// Contamos cómo desee el usuario
 		System.out.print("Ingresa un número hasta el cuál quieres contar : ");
 		int limite = sc.nextInt();
 
@@ -47,6 +47,21 @@ public class ForLoop {
 			System.out.println(i);
 
 		}
+
+		System.out.println();
+
+		// Leer cadena al revés
+		System.out.print("Ingresa una cadena para leer al revés: ");
+		sc.nextLine();
+		String cadena = sc.nextLine();
+
+		for (int j = cadena.length() -1 ; j >= 0; j--) {
+
+			System.out.print(cadena.charAt(j));
+
+		}
+
+		System.out.println();
 
 	}
 

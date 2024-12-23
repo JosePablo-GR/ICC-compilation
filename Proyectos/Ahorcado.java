@@ -1,3 +1,4 @@
+// ICC 2024-1
 import java.util.Scanner;
 import java.util.Random;
 
